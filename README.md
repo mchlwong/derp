@@ -5,7 +5,7 @@ Tailscale custom DERP server Dockerfile and configs.
 docker build --no-cache --tag derp:version .
 
 # Docker command
-Adding "-verify-clients" makes the container unhealthy (tls handshake failure) more frequently (from in days to in minutes!), so it is not recommended right now. In case you want to use "-verify-clients", add "-e DERP_DERP_VERIFY_CLIENTS=true" and "-v /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock".
+In case you want to use "-verify-clients", add "-e DERP_VERIFY_CLIENTS=true" and "-v /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock".
 ```shell
 docker run -d \
 --name derp \
