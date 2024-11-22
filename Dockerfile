@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine AS builder
+FROM golang:1.23.1-alpine AS builder
 RUN go install tailscale.com/cmd/derper@main
 
 FROM alpine
